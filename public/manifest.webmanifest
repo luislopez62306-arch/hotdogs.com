@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "Hot Dog's El Carballito",
+  "short_name": "ElCarballito",
+  "description": "Menú digital de Hot Dog's El Carballito con pedidos directos por WhatsApp.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#09090B",
+  "background_color": "#F9FAFB",
+  "icons": [
+    {
+      "src": "/assets/aistudio/IMG_6395_bb79ef09.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/aistudio/IMG_6395_bb79ef09.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
