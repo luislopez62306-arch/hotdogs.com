@@ -1,0 +1,78 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<!-- Plantilla: 6 formatos nativos de IG (pills + logo, polaroids + burbujas, rayas + estampillas, serif condensada + inicial script, serif "styled to", script + subtítulo). Cambia fotos/*.jpg y fotos/logo.jpg por las del cliente (de scripts/ig_perfil.js) y los textos por los suyos. Render: node ../scripts/render.js archivo.html salida 1080 1350 6 .s -->
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Poppins:wght@500;600&family=Bodoni+Moda:opsz,wght@6..96,400&family=Instrument+Serif&display=swap" rel="stylesheet">
+<style>
+:root{--rosa:#E8789B;--rosa2:#F7C9D6;--beige:#E5DACC;--crema:#FBF7F1}
+body{margin:0;background:#ddd;display:flex;gap:30px;padding:30px;flex-wrap:wrap}
+.s{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:'Poppins'}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.glow{text-shadow:0 2px 16px rgba(0,0,0,.25)}
+.pill{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;display:flex;align-items:center;justify-content:center;gap:20px;background:rgba(255,255,255,.95);border-radius:28px;padding:24px 56px;font-weight:600;font-size:42px;letter-spacing:-.01em;box-shadow:0 6px 20px rgba(60,20,30,.14)}
+.pill img{width:70px;height:70px;border-radius:50%}
+.emo{position:absolute;font-size:70px}
+.bub{position:absolute;background:#FFF1BF;color:var(--rosa);font-weight:600;font-size:34px;padding:16px 40px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.pola{position:absolute;background:#fff;padding:26px 26px 100px;box-shadow:0 18px 40px rgba(0,0,0,.32)}
+.pola div{width:100%;height:100%;background-size:cover;background-position:center}
+.stripes{background:repeating-linear-gradient(90deg,var(--crema) 0 92px,var(--beige) 92px 184px)}
+.stamp{position:absolute;background:#fff;padding:24px;box-shadow:0 14px 34px rgba(80,50,40,.22);-webkit-mask:linear-gradient(#000 0 0) content-box,radial-gradient(circle 10px,transparent 9.5px,#000 10px) -14px -14px/28px 28px}
+.stamp div{width:100%;height:100%;background-size:cover;background-position:center}
+.doodle{position:absolute;fill:none;stroke:var(--rosa);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.star{position:absolute;color:#F4A9C0;font-size:44px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.12))}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute">
+ <symbol id="pastel" viewBox="0 0 200 230"><path d="M30 220h140M44 220v-56h112v56M58 164v-42h84v42M100 122v-36M100 86q-7-14 0-24q7 10 0 24M44 190q14 12 28 0t28 0 28 0 28 0M58 144q10 9 21 0t21 0 21 0 21 0"/><path d="M100 104q-46-34-54-6q-6 24 54 6zM100 104q46-34 54-6q6 24-54 6zM95 106q-16 34-30 56M105 106q16 34 30 56"/></symbol>
+ <symbol id="corazon" viewBox="0 0 100 90"><path d="M50 82C10 52 4 30 18 16c12-12 28-6 32 8c4-14 20-20 32-8c14 14 8 36-32 66z"/></symbol>
+ <symbol id="corazon2" viewBox="0 0 100 90"><path d="M50 80C14 52 8 32 20 18c10-10 26-6 30 8c4-14 20-18 30-8c12 14 6 34-30 62zM60 30q8-6 14 2"/></symbol>
+</svg>
+
+<!-- 1 · como "Be My Bridesmaid?" -->
+<section class="s"><div class="bg" style="background-image:url(fotos/perfil-playa-toldo.jpg);background-position:center 72%"></div>
+ <div class="emo" style="left:96px;top:110px">🩷</div><div class="emo" style="left:190px;top:110px">💍</div>
+ <div class="pill" style="top:250px;color:var(--rosa)"><img src="fotos/logo.jpg">El Picnic de Francia</div>
+ <div class="pill" style="bottom:190px;color:#A88472;font-size:46px">Be My Bridesmaid?</div>
+</section>
+
+<!-- 2 · como "Be My Girlfriend" -->
+<section class="s"><div class="bg" style="background-image:url(fotos/playa.jpg);filter:blur(3px);transform:scale(1.06)"></div>
+ <div class="glow" style="position:absolute;left:0;right:0;top:110px;text-align:center;color:#FCEFB4;font-family:'Pinyon Script';font-size:150px">Be My Girlfriend</div>
+ <div class="pola" style="left:60px;top:360px;width:440px;height:420px;transform:rotate(0deg)"><div style="background-image:url(fotos/perfil-playa-toldo.jpg);background-position:center 70%"></div></div>
+ <div class="pola" style="left:500px;top:560px;width:470px;height:520px;transform:rotate(8deg)"><div style="background-image:url(fotos/perfil-alberca-toldo.jpg);background-position:center 60%"></div></div>
+ <div class="bub" style="right:110px;top:380px">She said yes</div>
+ <div class="bub" style="right:110px;top:470px;font-size:30px">🥂🧺💗</div>
+ <div class="emo" style="left:80px;top:1090px;font-size:62px">🤍🤍🤍</div>
+</section>
+
+<!-- 3 · como "Birthday Table" -->
+<section class="s stripes">
+ <div class="stamp" style="left:60px;top:110px;width:500px;height:560px;transform:rotate(-2deg)"><div style="background-image:url(fotos/perfil-mesa-larga.jpg)"></div></div>
+ <div class="stamp" style="left:430px;top:640px;width:560px;height:560px;transform:rotate(4deg)"><div style="background-image:url(fotos/perfil-mesa-ventana.jpg);background-position:center 70%"></div></div>
+ <div style="position:absolute;left:585px;top:250px;color:var(--rosa)"><span style="font-family:'Great Vibes';font-size:200px;line-height:.6;vertical-align:-40px">B</span><span style="font-family:'Poppins';font-weight:500;font-size:68px;letter-spacing:-.02em">irthday</span></div>
+ <div style="position:absolute;left:650px;top:400px;background:#B7AA9E;color:#fff;font-weight:600;letter-spacing:.34em;font-size:34px;padding:16px 60px">TABLE</div>
+ <svg class="doodle" style="left:90px;top:840px;width:280px;height:320px"><use href="#pastel"/></svg>
+ <div class="star" style="left:600px;top:90px">★</div><div class="star" style="right:80px;top:150px">★</div><div class="star" style="right:120px;top:560px">★</div><div class="star" style="left:60px;top:740px">★</div><div class="star" style="left:400px;top:1220px">★</div>
+</section>
+
+<!-- 4 · como "Haz especial su cumpleaños" -->
+<section class="s"><div class="bg" style="background-image:url(fotos/perfil-mesa-ventana.jpg);background-position:center 75%"></div>
+ <div class="bg" style="background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 40%)"></div>
+ <div class="glow" style="position:absolute;left:0;right:0;top:90px;text-align:center;color:#fff">
+  <div style="display:inline-block;transform:scaleX(.74);font-family:'Bodoni Moda';font-size:112px;line-height:1.02;letter-spacing:-.01em"><span style="font-family:'Great Vibes';font-size:180px;line-height:.5;margin-right:-6px">H</span>AZ ESPECIAL<br>SU ANIVERSARIO</div></div>
+ <svg class="doodle" style="left:110px;top:300px;width:110px;height:100px;stroke:#fff"><use href="#corazon2"/></svg>
+ <svg class="doodle" style="left:200px;top:390px;width:60px;height:56px;stroke:#fff"><use href="#corazon"/></svg>
+ <svg class="doodle" style="right:110px;top:300px;width:140px;height:165px;stroke:#fff"><use href="#pastel"/></svg>
+</section>
+
+<!-- 5 · como "styled to celebrate" -->
+<section class="s"><div class="bg" style="background-image:url(fotos/perfil-mesa-larga.jpg);background-position:center 60%"></div>
+ <div class="bg" style="background:linear-gradient(180deg,rgba(0,0,0,.45),transparent 40%)"></div>
+ <div class="glow" style="position:absolute;left:120px;top:220px;color:#fff;font-family:'Instrument Serif';font-size:140px;line-height:.78;letter-spacing:-.035em">styled to <span style="font-size:80px;vertical-align:40px">✦</span><br><span style="padding-left:130px">celebrate</span></div>
+</section>
+
+<!-- 6 · como "Save the Date · Spot design" -->
+<section class="s"><div class="bg" style="background-image:url(fotos/perfil-alberca-toldo.jpg);background-position:center 60%"></div>
+ <div class="bg" style="background:radial-gradient(60% 25% at 50% 48%,rgba(0,0,0,.28),transparent)"></div>
+ <div class="glow" style="position:absolute;left:0;right:0;top:500px;text-align:center;color:#fff">
+  <div style="font-family:'Pinyon Script';font-size:160px;line-height:1">Save the Date</div>
+  <div style="font-family:'Bodoni Moda';font-size:58px;letter-spacing:.06em;margin-top:6px">SPOT DESIGN</div></div>
+</section>
+</body></html>
